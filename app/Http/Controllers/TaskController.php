@@ -12,7 +12,9 @@ class TaskController extends Controller
 {
     public function index(): Collection
     {
-        return Task::with('keywords')->get();
+        return Task::select('id', 'title', 'is_done')
+            ->with(['keywords:id,name'])
+            ->get();
     }
 
     public function store(TaskRequest $request): JsonResponse

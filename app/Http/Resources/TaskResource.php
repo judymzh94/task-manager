@@ -19,8 +19,6 @@ class TaskResource extends JsonResource
             'title'    => $this->title,
             'is_done'  => (bool) $this->is_done,
             'keywords' => KeywordResource::collection($this->whenLoaded('keywords')),
-            'created_at' => $this->created_at?->toDateTimeString(),
-            'updated_at' => $this->updated_at?->toDateTimeString(),
         ];
     }
 }
