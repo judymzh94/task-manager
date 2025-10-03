@@ -62,3 +62,54 @@ Permite crear, listar y actualizar tareas, asignarles estados (pendiente/complet
 - **PATCH** `/api/tasks/{id}/toggle` → Cambiar estado de tarea
 - **GET** `/api/keywords` → Listar palabras clave
 - **POST** `/api/keywords` → Crear nueva palabra clave  
+
+## Acceso al Dashboard de Tareas
+La ruta de acceso al dashboard de gestión de tareas es el home de la aplicación "/"
+
+##  Funcionamiento del Dashboard de Tareas
+
+El dashboard de gestión de tareas está dividido en tres secciones principales:
+
+![Vista del dashboard](docs/screenshots/dashboard.png)
+
+1. Crear nueva palabra clave
+
+- Ingresa un nombre de palabra clave en el campo de texto.
+
+- Haz clic en Crear para guardarla.
+
+2. Crear nueva tarea
+
+    ![Vista del formulario de creación de tareas](docs/screenshots/form.png)
+
+- Escribe el título de la tarea en el campo de texto.
+
+- Selecciona una o varias palabras clave en la lista desplegable.
+
+- Haz clic en Crear tarea para añadirla a la lista.
+
+3. Lista de tareas
+
+    Cada tarea muestra:
+
+   - Título
+
+   - Estado (Pendiente o Completada)
+
+   - Palabras clave asociadas
+
+   - Botón de acción:
+
+     - Si la tarea está **Pendiente**, verás el botón Marcar como completada.
+
+     - Si la tarea está **Completada**, verás el botón Marcar como pendiente.
+
+   - Estados de las tareas
+
+     - **Pendiente** → badge gris y botón para marcar como completada.
+
+     - **Completada** → badge verde y botón para marcar como pendiente.
+
+
+
+
